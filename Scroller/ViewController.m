@@ -22,9 +22,11 @@
     NSMutableArray * contetArray = [[NSMutableArray alloc] init];
     
     LinkScrollerView * sc = [[LinkScrollerView alloc] initWithFrame:self.view.frame];
-    sc.titleArray = [[NSMutableArray alloc] initWithObjects:@"测试1",@"测试2",@"测试3",@"测试4",@"测试5vfsdhfidsuhfiashfisudhfisd", nil];
+    sc.titleArray = [[NSMutableArray alloc] initWithObjects:@"测试1测试1测试1",@"测试2",@"测试3测试3",@"测试4测试4",@"测试5", nil];
     
-    sc.minCount = 4;
+    sc.minCount = 4; // 标题栏当前页面最少几个标签
+    
+    sc.selectedColor = [UIColor greenColor]; // 标题栏选中标题颜色
     
     UIView * view = [[UIView alloc] init];
     view.backgroundColor = [UIColor redColor];
@@ -45,7 +47,6 @@
     view = [[UIView alloc] init];
     view.backgroundColor = [UIColor grayColor];
     [contetArray addObject:view];
-    
     sc.contentViewArray = contetArray;
     
     [sc loadContent];

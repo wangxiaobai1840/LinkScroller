@@ -10,14 +10,17 @@
 
 @interface LinkScrollerView : UIView
 
+// 抬头标签少于几个的时候平均显示
+@property (nonatomic, assign) NSInteger minCount;
+
+// 选中标题的颜色
+@property (nonatomic, strong) UIColor * selectedColor;
+
 // 抬头标题内容
 @property (nonatomic, strong) NSMutableArray * titleArray;
 
 // 内容视图数组
 @property (nonatomic, strong) NSMutableArray * contentViewArray;
-
-// 抬头标签少于几个的时候平均显示
-@property (nonatomic, assign) NSInteger minCount;
 
 -(void)loadContent;
 
