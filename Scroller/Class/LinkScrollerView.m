@@ -35,7 +35,7 @@
 
 - (void)createUI{
     _titleSelectedIndex = 100;
-    _titleScrollerView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, self.frame.size.width, 45)];
+    _titleScrollerView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 45)];
     _titleScrollerView.tag = 1000;
     _titleScrollerView.delegate = self;
     _titleScrollerView.showsVerticalScrollIndicator = NO;

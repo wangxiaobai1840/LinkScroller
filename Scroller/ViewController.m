@@ -21,8 +21,8 @@
     
     NSMutableArray * contetArray = [[NSMutableArray alloc] init];
     
-    LinkScrollerView * sc = [[LinkScrollerView alloc] initWithFrame:self.view.frame];
-    sc.titleArray = [[NSMutableArray alloc] initWithObjects:@"测试1测试1测试1",@"测试2",@"测试3测试3",@"测试4测试4",@"测试5", nil];
+    LinkScrollerView * sc = [[LinkScrollerView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20)];
+    sc.titleArray = [[NSMutableArray alloc] initWithObjects:@"测试1测试1测试1",@"测试2",@"测试3测试3",@"测试4测试4",@"测试5",@"测试6测试6测试6",@"测试7测试7测试7",nil];
     
     sc.minCount = 4; // 标题栏当前页面最少几个标签
     
@@ -46,6 +46,14 @@
     
     view = [[UIView alloc] init];
     view.backgroundColor = [UIColor grayColor];
+    [contetArray addObject:view];
+    
+    view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor greenColor];
+    [contetArray addObject:view];
+    
+    view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor whiteColor];
     [contetArray addObject:view];
     sc.contentViewArray = contetArray;
     
